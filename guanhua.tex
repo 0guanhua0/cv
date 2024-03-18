@@ -1,78 +1,83 @@
 \documentclass{cv}
 
-\usepackage[left=0.45in, top=0.3in, right=0.45in, bottom=0.3in]{geometry}
+\usepackage[left=0.45in, top=0.3in, right=0.45in, bottom=0.3in]{
+	geometry
+} % Document margins
 \usepackage{hyperref}
 \hypersetup{colorlinks=true, urlcolor=black,}
 
 \name{Guanhua Chen}
-\address{(984)~$\cdot$~245~$\cdot$~5931 \\ \href{mailto:0guanhua0@gmail.com}{0guanhua0@gmail.com} }
+\address{984~$\cdot$~245~$\cdot$~5931 \\ \href{mailto:0guanhua0@gmail.com}{0guanhua0@gmail.com} }
 
 \begin{document}
 	\begin{rSection}
-		{Education}
-
-		{\bf DUKE University} \hfill {\em August 2019 - May 2021} \\ M.S. in Electrical
-		\& Computer Engineering
-
-		{\bf Huazhong University of Science and Technology } \hfill
-		{\em September 2015 - June 2019} \\ B.S. in Electrical \& Computer Engineering
-	\end{rSection}
-
-	\begin{rSection}
-		{Intern}
+		{Work}
 		\begin{rSubsection}
-			{Duke Polarization Lab}{May 2020 - Jan 2021} {Express, React, Redis, D3}{}
-			\item Developed a web app that reflect ideology score based on the user twitter
-			handle. \item Built an Express server which pull data from Twitter api. Dealing
-			with the paging issue and rate limit problem. \item Used Redis to improve
-			server performance from 1 to 0.5 ms/request. \item Helped build frontend with
-			React. Used D3 to visualize the user connection.
+			{VMware}{Jul 2021 - now} {build - os \& toolchain}{Palo Alto, CA}
+			\begin{project}
+				{design cloud build framework} \item speed up by using packer to parallel
+				on-prem(ova) \& aws(ami) build. cut 40min to 15min. \item port \& clean plugin
+				code. fix go.mod to pull right package.
+			\end{project}
+
+			\begin{project}
+				{port product os} \item design python dependency framework for cross version
+				support. \item tune system \& python package for cross platform \&
+				product support.
+			\end{project}
+
+			\begin{project}
+				{port python 2 to 3} \item improve security \& performance by porting build
+				python script. \item imporve code quality by adding auto formatting and
+				linting to jenkins pipeline. \item speed up overall process by providing general
+				guide to other teams.
+			\end{project}
+
+			\begin{project}
+				{open source compliance} \item design open source scanning framework for
+				source code, product binary, docker image. \item to improve productivity,
+				automate license review process base on license type \& interaction.
+				\item avoid legal issue by working across team to generate proper
+				license file. \item to improve performance, update \& clean open source
+				scanning toolchain.
+			\end{project}
+
+			\begin{project}
+				{misc} \item improve performance by cleaning makefile \& bash script.
+				find minimal set for build target. \item tune build system to handle network
+				turbulence. \item work across team to track down package from upstream
+				change.
+			\end{project}
 		\end{rSubsection}
 	\end{rSection}
 
 	\begin{rSection}
-		{Projects}
-
+		{intern}
 		\begin{rSubsection}
-			{Mini Amazon}{March 2020 - April 2020}
-			{Python, Django, PostgreSQL, Bootstrap, JQuery, Nginx}{} \item Developed a
-			RESTful online shopping web app and shipped in Docker. \item Define
-			protocol using Google buffer protocol, making communication more reliable and
-			reduce overhead. \item Used queue and sequence number to track messages. Designed
-			threading strategy for communication. \item Implemented user friendly
-			interface using Bootstrap. Added CSRF token for protection. \item Designed
-			schema for user, products and stored data in PostgreSQL. Used Nginx as
-			reverse proxy.
-		\end{rSubsection}
-		\begin{rSubsection}
-			{Conquer}{February 2020 - March 2020}
-			{Java, Android, Morphia, MongoDB, JUnit, Gradle, Docker, JSSE}{} \item Developed
-			an Android Civilization-like multi-player strategy game. Used JSSE for
-			encryption. \item Built with Gradle, continuous deployed with Gitlab
-			pipeline, tested with JUnit. \item Built a robust server with disaster
-			recovery strategy. Reconstruct thread and retrieve all game state. \item
-			Designed the threading \& syncing strategy for player gaming and direct
-			messages. \item Designed game info schema and used Morphia to persist all gaming
-			data in MongoDB. \item Achieve 100\% test coverage under JUnit framework.
-			Making sure all exceptions are handled properly.
-		\end{rSubsection}
-
-		\begin{rSubsection}
-			{Shell}{November 2019 - December 2019} {Linux, C++, GDB, Valgrind}{} \item
-			Implemented a Linux shell in RAII style which could interpret basic command.
-			\item Parsed the input string using regular expression. Tested with GDB \&
-			Valgrind, no memory leak. \item Provided access to environment variable and
-			redirection for io stream.
+			{Duke Polarization Lab}{May 2020 - Jan 2021} {app - express, redis, react}{Durham, NC}
+			\begin{project}
+				{} \item build web app that show political bias score based on twitter handle.
+				\item build express server to pull data from twitter. fix paging \& rate
+				limit issue. \item use redis to improve server performance from 1 to 0.5
+				ms/request. \item build frontend with react. use d3 to visualize user
+				connection.
+			\end{project}
 		\end{rSubsection}
 	\end{rSection}
 
 	\begin{rSection}
-		{Strengths}
+		{Education} {\bf Duke University} \hfill {\em Aug 2019 - May 2021} \\ M.S.
+		in Electrical \& Computer Engineering
 
+		{\bf Huazhong University of Science and Technology } \hfill {\em Sep 2015 - Jun 2019}
+		\\ B.S. in Optics \& Electronics Information
+	\end{rSection}
+
+	\begin{rSection}
+		{Skill}
 		\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-			Frameworks & Spring, Django, React, Express, Bootstrap, Node \\
-			Languages  & Java, Javascript, C++, Python, Go, SQL, noSQL   \\
-			Tools      & Postman, GDB, Unix CLI tools
+			tool & aws, linux, make, meson, git, packer, docker, shell, jenkins \\
+			lang & go, java, c++, python, sql, nosql                   \\
 		\end{tabular}
 	\end{rSection}
 \end{document}
